@@ -1,0 +1,132 @@
+<html>
+<head>
+   <title>Pat's webpage</title>
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!--<script src=/js/jquery-3.1.0.min.js></script>-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"></link>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+   <script src="https://github.com/typicaljoe/taffydb/raw/master/taffy.js"></script>
+   <!--<script src=/taffydb-master/taffy.js></script>-->
+   </head>
+<script>
+</script>
+<body style="text-alignment:center;margin:20px">
+<h1>Esta es mi pagina web para facilitar la busqueda de elementos para crear una nueva. Esto es un parrafo H1</h1>
+<h4>This is a training page. Esto es un parrafo H4</h4>
+<h2>H2</h2>
+<h3>H3</h3>
+<h5>H5</h5>
+<h6>H6</h6>
+<h3 style="font-family:comic-sans;font-size:14px">Test</h3>
+
+   
+<div class="container"><!--1-->
+
+   <form role="form"><!--2-->
+      <div class="form-group"><!--3-->
+         <label for="email">Email</label>
+         <input type="email" class="form-control" id="email"><!--<span class="glyphicon glyphicon-envelope"></span>--></input>
+      </div><!--3-->
+   
+      <div class="form-group"><!--3-->
+         <label for="password">Password</label>
+         <input type="password" class="form-control" id="pwd"><!--<span class="glyphicon glyphicon-keys">--></span></input>
+      </div><!--3-->
+      
+      <div class="checkbox"><!--3-->
+         <label>Remember me<input type="checkbox"><!--<span class="glyphicon glyphicon-star"></span>--></input></label>
+      <!--3-->
+      <buttom type="submit" class="btn btn-default"></buttom>
+      </div>
+   </form>
+</div>
+   <div class="container">
+   <div class="row">
+      <div class="col-sm-8">
+         
+         </div>
+      <div class="col-sm-4">
+         <div class="btn btn-default" id="botonppal"><p>Prueba</p></div>
+      </div>
+   </div>
+<div class="container">
+   <table class="table table-bordered" id="tabla01">
+      <thead><h4>Titulo</h4></thead>
+      <!--cabecera del titulo-->
+      <tr><!--Fila de la tabla-->
+         <th>Primer Nombre</th>
+         <th>Segundo Nombre</th>
+         <th>Primer Apellido</th>
+         <th>Segundo Apellido</th>
+      </tr>
+      <tr>
+         <th>Patrick</th>
+         <th>Ernesto</th>
+         <th>Cuauro</th>
+         <th>Nava</th>
+      </tr>
+      <tr>
+         <th>Output1</th>
+         <th>Output2</th>
+         <th>Output3</th> 
+         <th>Output4</th>
+      </tr>
+   </table>
+</div>
+      </div>
+<!--Tabla de usuarios para ingresar a una pagina web, primero tengo que tener la pagina-->
+<div class="btn btn-defautl" id="Loginbtn" onclick="#">Presionar</div>
+
+<!--tabla de ejemplo sacada de la pagina de Taffydb.com-->
+<!--Create DB and fill it with records-->
+<script>var friends = TAFFY([
+	{"id":1,"gender":"M","first":"John","last":"Smith","city":"Seattle, WA","status":"Active"},
+	{"id":2,"gender":"F","first":"Kelly","last":"Ruth","city":"Dallas, TX","status":"Active"},
+	{"id":3,"gender":"M","first":"Jeff","last":"Stevenson","city":"Washington, D.C.","status":"Active"},
+	{"id":4,"gender":"F","first":"Jennifer","last":"Gill","city":"Seattle, WA","status":"Active"}	
+]);
+   </script>
+
+<!-- Find all the friends in Seattle
+friends({city:"Seattle, WA"});
+
+// Find John Smith, by ID
+friends({id:1});
+
+// Find John Smith, by Name
+friends({first:"John",last:"Smith"});-->
+
+<div class="btn btn-defautl" id="Show01" onclick=mostrar()>Presionar2</div>
+<script>
+   function mostrar(){
+      alert(friends({first:"John",last:"Smith"}));
+            </Script>
+<!--// Kelly's record
+var kelly = friends({id:2}).first();
+
+// Kelly's last name
+var kellyslastname = kelly.last;
+
+// Get an array of record ids
+var cities = friends().select("id");
+
+// Get an array of distinct cities
+var cities = friends().distinct("city");
+
+// Apply a function to all the male friends
+friends({gender:"M"}).each(function (r) {
+   alert(r.name + "!");
+});
+
+// Move John Smith to Las Vegas
+friends({first:"John",last:"Smith"}).update({city:"Las Vegas, NV:"});
+
+// Remove Jennifer Gill as a friend
+friends({id:4}).remove();
+
+// insert a new friend
+friends.insert({"id":5,"gender":"F","first":"Jennifer","last":"Gill","city":"Seattle, WA","status":"Active"});-->
+</body>
+</html>
