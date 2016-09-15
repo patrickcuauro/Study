@@ -7,13 +7,58 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"></link>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-   <script src="https://github.com/typicaljoe/taffydb/raw/master/taffy.js"></script>
+   <!--<script src="https://github.com/typicaljoe/taffydb/raw/master/taffy.js"></script>-->
    <!--<script src=/taffydb-master/taffy.js></script>-->
    </head>
 <script>
 </script>
-<body style="text-alignment:center;margin:20px">
-<h1>Esta es mi pagina web para facilitar la busqueda de elementos para crear una nueva. Esto es un parrafo H1</h1>
+<body style="margin:20px;background-color:white">
+<h1>Bienvenidos</h1>
+    <!--<script type="text/javascript">
+        var d = new Date();
+        document.write(d.getHours());
+</script>-->
+<!--<script type="text/javascript">
+        var d = new Date();
+        document.write('Fecha: ' + d.getDate(), '<br>Dia de la semana: ' + d.getDay(), '<br>Mes (0 al 11): ' + d.getMonth(), '<br>year: ' + d.getFullYear(), '<br>Hora: ' + d.getHours(), '<br>Hora UTC: ' + d.getUTCHours(), '<br>Minutos: ' + d.getMinutes(), '<br>Segundos: ' + d.getSeconds());
+</script>-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#esconderlabel").click(function () {
+                //$("#reloj").write("test");
+                $("#1").hide();
+            });
+        });
+        $(document).ready(function () {
+            $("#mostrarlabel").click(function () {
+                //$("#reloj").write("test");
+                $("#1").show();
+            });
+        });
+        function startTime() {
+            today = new Date();
+            h = today.getHours();
+            m = today.getMinutes();
+            s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('reloj').innerHTML = h + ":" + m + ":" + s;
+            if (h < 18) { document.body.style.backgroundColor = "#ffa500" }
+            if (h >= 18 && h < 20) { document.body.style.backgroundColor = "#008000" }
+            if (h >= 20) { document.body.style.backgroundColor = "#808080" }
+            t = setTimeout('startTime()', 100);
+            document.getElementById('reloj').style.color="#99ffcc"
+        }
+        function checkTime(i)
+        { if (i < 10) { i = "0" + i; } return i; }
+        window.onload = function () { startTime(); }
+ </script>
+<div id="reloj" style="font-size:14px;"></div>
+    <label id="1" style="font-size:20px">Prueba</label>
+    <button class="btn btn-default" id="esconderlabel">Esconder</button>
+    <button class="btn btn-default" id="mostrarlabel">Mostrar</button>
+
+
 <h4>This is a training page. Esto es un parrafo H4</h4>
 <h2>H2</h2>
 <h3>H3</h3>
@@ -22,24 +67,23 @@
 <h3 style="font-family:comic-sans;font-size:14px">Test</h3>
 
    
-<div class="container"><!--1-->
+<div class="container">
 
-   <form role="form"><!--2-->
-      <div class="form-group"><!--3-->
+   <form role="form">
+      <div class="form-group">
          <label for="email">Email</label>
          <input type="email" class="form-control" id="email"><!--<span class="glyphicon glyphicon-envelope"></span>--></input>
-      </div><!--3-->
+      </div>
    
-      <div class="form-group"><!--3-->
+      <div class="form-group">
          <label for="password">Password</label>
          <input type="password" class="form-control" id="pwd"><!--<span class="glyphicon glyphicon-keys">--></span></input>
-      </div><!--3-->
-      
-      <div class="checkbox"><!--3-->
-         <label>Remember me<input type="checkbox"><!--<span class="glyphicon glyphicon-star"></span>--></input></label>
-      <!--3-->
-      <buttom type="submit" class="btn btn-default"></buttom>
       </div>
+      
+      <!--<div class="checkbox">
+         <label>Remember</label><input type="checkbox"></input>
+      <buttom type="submit" class="btn btn-default"></buttom>
+      </div>-->
    </form>
 </div>
    <div class="container">
@@ -81,13 +125,13 @@
 
 <!--tabla de ejemplo sacada de la pagina de Taffydb.com-->
 <!--Create DB and fill it with records-->
-<script>var friends = TAFFY([
+<!--<script>var friends = TAFFY([
 	{"id":1,"gender":"M","first":"John","last":"Smith","city":"Seattle, WA","status":"Active"},
 	{"id":2,"gender":"F","first":"Kelly","last":"Ruth","city":"Dallas, TX","status":"Active"},
 	{"id":3,"gender":"M","first":"Jeff","last":"Stevenson","city":"Washington, D.C.","status":"Active"},
 	{"id":4,"gender":"F","first":"Jennifer","last":"Gill","city":"Seattle, WA","status":"Active"}	
 ]);
-   </script>
+   </script>-->
 
 <!-- Find all the friends in Seattle
 friends({city:"Seattle, WA"});
@@ -99,10 +143,10 @@ friends({id:1});
 friends({first:"John",last:"Smith"});-->
 
 <div class="btn btn-defautl" id="Show01" onclick=mostrar()>Presionar2</div>
-<script>
+<!--<script>
    function mostrar(){
       alert(friends({first:"John",last:"Smith"}));
-            </Script>
+            </Script>-->
 <!--// Kelly's record
 var kelly = friends({id:2}).first();
 
