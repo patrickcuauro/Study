@@ -1,34 +1,35 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="Principal.aspx.vb" Inherits="_Default" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/principal.master" AutoEventWireup="false" CodeFile="principal.aspx.vb" Inherits="principal2" %>
 
-<!DOCTYPE html>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine">
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    
+    <link href="css/principal.css" rel="stylesheet"/>
+
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <style>
-        body {
-            font-family:tangerine,serif;
-            background-color: black;
-            color: white;
-            font-size:40px;
-            text-shadow: 4px 4px 4px #bbb;
+
+        @media (min-width:768px) {
+            body {
+                padding-top: 50px !important;
+            }
         }
-
     </style>
-    <form id="form1" runat="server">
-    <div class="container"><div class="navbar inverse navbar">prueba</div></div>
-    <h1>Prueba</h1>
-        tomar la prueba
-
-        cuentas
-        resumen
-        ayuda
+    <div class="bs-docs-header" id="content">
+        <div class="container">
+            <div>
+                <h2>Sistema Administrativo Integral</h2>
+            </div>
+            <br />
+            <div class="hide">
+                <input type="button" class="btn btn-warning" value="COTIZAR" onclick="window.location.href = 'frm_cotizaciones.aspx'" />
+                <input type="button" class="btn btn-warning" value="PEDIDO" onclick="window.location.href = 'frm_pedidos.aspx'" />
+                <input type="button" class="btn btn-warning" value="RECIBO" onclick="window.location.href = 'frm_recibo.aspx'" />
+                <input type="button" class="btn btn-warning" value="FACTURA" onclick="window.location.href = 'frm_facturas.aspx'" />
+                <input type="button" class="btn btn-warning" value="ORDEN DE COMPRA" onclick="window.location.href = 'frm_ordenes_compras.aspx'" />  
+                <input type="button" class="btn btn-warning" value="COMPRA" onclick="window.location.href = 'frm_compras.aspx'" />   
+                <input type="button" class="btn btn-warning" value="INVENTARIO" onclick="window.location.href = 'lst_inventarios.aspx'" />  
+            </div>
+        </div>
     </div>
-    </form>
-</body>
-</html>
+</asp:Content>
+

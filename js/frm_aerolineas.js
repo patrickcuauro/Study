@@ -54,7 +54,7 @@ function load() {
                 $("#dv_Message").hide()
                 $("#dv_Error").html(response.msj);
                 $("#dv_Error").show();
-                setTimeout(function () { $('#dv_Error').hide(); }, 10000);
+                setTimeout(function () { $('#dv_Error').hide(); }, 2000);
             }
         },
         error: function () {
@@ -62,7 +62,7 @@ function load() {
             $('.btn').show();
             $("#dv_Error").html('Error de comunicación con el servidor. El record no ha sido cargado.');
             $("#dv_Error").show();
-            setTimeout(function () { $('#dv_Error').hide(); }, 10000);
+            setTimeout(function () { $('#dv_Error').hide(); }, 2000);
         }
     });
 };
@@ -100,7 +100,7 @@ function Permisos() {
             else {
                 $("#dv_error").html(response.msj);
                 $("#dv_error").show();
-                setTimeout(function () { $('#dv_error').hide(); }, 10000);
+                setTimeout(function () { $('#dv_error').hide(); }, 2000);
             }
         },
         error: function () {
@@ -108,7 +108,7 @@ function Permisos() {
             $('.btn').show();
             $("#dv_error").html('Error de comunicación con el servidor. Función Permisos().');
             $("#dv_error").show();
-            setTimeout(function () { $('#dv_error').hide(); }, 10000);
+            setTimeout(function () { $('#dv_error').hide(); }, 2000);
         }
     });
 }
@@ -168,7 +168,7 @@ function save() {
                 else {
                     $("#dv_Error").html(response.msj);
                     $("#dv_Error").show();
-                    setTimeout(function () { $('#dv_Error').hide(); }, 10000);
+                    setTimeout(function () { $('#dv_Error').hide(); }, 2000);
                 }
             },
             error: function () {
@@ -177,7 +177,7 @@ function save() {
                 $('.btn').show();
                 $("#dv_Error").html('Error de comunicación con el servidor. El record no ha sido actualizado.');
                 $("#dv_Error").show();
-                setTimeout(function () { $('#dv_Error').hide(); }, 10000);
+                setTimeout(function () { $('#dv_Error').hide(); }, 2000);
             }
         });
 }
@@ -226,7 +226,7 @@ function save() {
         if (id == '') {
             $("#dv_error").html('Seleccione un registro');
             $("#dv_error").show();
-            setTimeout(function () { $('#dv_error').hide(); }, 10000);
+            setTimeout(function () { $('#dv_error').hide(); }, 2000);
             return false;
         }
 
@@ -247,14 +247,14 @@ function save() {
                     $("#dv_Error2").hide()
                     $("#dv_Message2").html('El record ha sido eliminado.');
                     $("#dv_Message2").show();
-                    setTimeout(function () { $('#dv_Message2').hide(); }, 10000);
+                    setTimeout(function () { $('#dv_Message2').hide(); }, 2000);
                     $('#tbl_contacto').dataTable().fnDestroy();
                     contactoLoad();
                 }
                 else {
                     $("#dv_Error2").html(response.msj);
                     $("#dv_Error2").show();
-                    setTimeout(function () { $('#dv_Error2').hide(); }, 10000);
+                    setTimeout(function () { $('#dv_Error2').hide(); }, 2000);
                 }
             },
             error: function () {
@@ -264,7 +264,7 @@ function save() {
                 deletemodal.close()
                 $("#dv_Error2").html('Error de comunicación con el servidor. El record no ha sido actualizado.');
                 $("#dv_Error2").show();
-                setTimeout(function () { $('#dv_Error2').hide(); }, 10000);
+                setTimeout(function () { $('#dv_Error2').hide(); }, 2000);
             }
         });
     };
@@ -279,7 +279,7 @@ function save() {
         if (id == '') {
             $("#dv_error").html('Seleccione un registro');
             $("#dv_error").show();
-            setTimeout(function () { $('#dv_error').hide(); }, 10000);
+            setTimeout(function () { $('#dv_error').hide(); }, 2000);
             return false;
         }
         $('.loading').show()
@@ -312,7 +312,7 @@ function save() {
                     $("#dv_Message2").hide()
                     $("#dv_Error2").html(response.msj);
                     $("#dv_Error2").show();
-                    setTimeout(function () { $('#dv_Error').hide(); }, 10000);
+                    setTimeout(function () { $('#dv_Error').hide(); }, 2000);
                 }
             },
             error: function () {
@@ -322,7 +322,7 @@ function save() {
                 //$('#modal').modal('hide');
                 $("#dv_Error2").html('Error de comunicación con el servidor. El record no ha sido actualizado.');
                 $("#dv_Error2").show();
-                setTimeout(function () { $('#dv_Error').hide(); }, 10000);
+                setTimeout(function () { $('#dv_Error').hide(); }, 2000);
             }
         });
     };
@@ -389,13 +389,13 @@ function save() {
                     $("#dv_Error2").hide()
                     $("#dv_Message2").html('El record ha sido procesado con exito.');
                     $("#dv_Message2").show();
-                    setTimeout(function () { $('#dv_Message2').hide(); }, 10000);
+                    setTimeout(function () { $('#dv_Message2').hide(); }, 2000);
                     contactoLoad()
                 }
                 else {
                     $("#dv_Error2").html(response.msj);
                     $("#dv_Error2").show();
-                    setTimeout(function () { $('#dv_Error2').hide(); }, 10000);
+                    setTimeout(function () { $('#dv_Error2').hide(); }, 2000);
                 }
             },
             error: function () {
@@ -405,7 +405,7 @@ function save() {
                 modal.close();
                 $("#dv_Error2").html('Error de comunicación con el servidor. El record no ha sido actualizado.');
                 $("#dv_Error2").show();
-                setTimeout(function () { $('#dv_Error2').hide(); }, 10000);
+                setTimeout(function () { $('#dv_Error2').hide(); }, 2000);
             }
         });
     };
@@ -437,7 +437,7 @@ function save() {
                     $("#Identificador").focus();
                     $("#dv_Error").html("La Aerolinea '" + response.Nombre + "' ya esta registrada.");
                     $("#dv_Error").show();
-                    setTimeout(function () { $('#dv_Error').hide(); }, 10000);
+                    setTimeout(function () { $('#dv_Error').hide(); }, 2000);
                     return false;
                 }
                 if (response.rslt == '') {
@@ -451,7 +451,7 @@ function save() {
                 else {
                     $("#dv_Error").html(response.msj);
                     $("#dv_Error").show();
-                    setTimeout(function () { $('#dv_Error').hide(); }, 10000);
+                    setTimeout(function () { $('#dv_Error').hide(); }, 2000);
                     $("#Identificador").focus();
                 }
             },
@@ -460,7 +460,7 @@ function save() {
                 $('.btn').show();
                 $("#dv_Error").html('Error de comunicación con el servidor. Funcion CargarCliente().');
                 $("#dv_Error").show();
-                setTimeout(function () { $('#dv_Error').hide(); }, 10000);
+                setTimeout(function () { $('#dv_Error').hide(); }, 2000);
                 $("#Identificador").focus();
             }
         });
